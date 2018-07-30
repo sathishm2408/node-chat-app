@@ -4,16 +4,12 @@ var socket=io();
 socket.on('connect',function(){
 console.log('connected to server');
 
-/*socket.emit('createEmail',{
-	from:"sachu@gmail.com"
-});
-*/
-
+/*
 socket.emit('createMessage',{
 	from:"sachu@gmail.com",
 	text:"nope"
 });
-
+*/
 
 });
 
@@ -28,5 +24,5 @@ console.log('Disconnected from server');
 */
 
 socket.on('newMessage',function(message){
-	console.log('newMessge ',message);
+	console.log('newMessage ',message);
 });
