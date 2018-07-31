@@ -57,9 +57,10 @@ io.on('connection',(socket)=>{
 		});
 		*/
 		
-	socket.on('createMessage',function(message){
+	socket.on('createMessage',function(message,callback){
 		console.log('createMessage',message);
 		io.emit('newMessage',generateMessage(message.from,message.text));
+		callback('this is from server');
 	});
 		
 		/*
